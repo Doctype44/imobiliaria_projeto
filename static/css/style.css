@@ -1219,7 +1219,7 @@ body.translated-rtl {
 
 .avatar-img {
     width: -50px;      /* Faz a imagem respeitar o tamanho do bloco */
-    max-width: 420px;            /* Define o tamanho ideal do corretor na tela */
+    max-width: 250px;            /* Define o tamanho ideal do corretor na tela */
     height: auto;                /* Altura automática para não distorcer */
     object-fit: contain;         /* Mudado de 'cover' para 'contain' para não cortar o corretor */
     
@@ -1227,7 +1227,7 @@ body.translated-rtl {
     /* Removemos o border-radius e o box-shadow que criavam o quadrado. */
     /* Se você quiser uma sombra Realista que segue o contorno do corpo dele, use filter: */
     filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.6));
-    transform: translateY(1000px); /* Mantemos o corretor levemente abaixo para efeito de destaque */
+    transform: translateY(100px); /* Mantemos o corretor levemente abaixo para efeito de destaque */
 }
 
 .hero-conteudo {
