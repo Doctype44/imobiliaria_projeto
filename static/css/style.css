@@ -2060,3 +2060,16 @@ body.translated-rtl {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
 }
+/* Controla o container da imagem */
+.hero-avatar-bloco {
+    max-width: 320px; /* Altere esse valor (ex: 250px, 300px) para definir a largura máxima dele na tela */
+    width: 100%;
+    margin: 0 auto;   /* Centraliza o bloco se necessário */
+}
+
+/* Controla a imagem em si para não passar do bloco */
+.hero-avatar-bloco img {
+    width: 100%;
+    height: auto;     /* Mantém a proporção original para não achatar o rosto */
+    object-fit: contain;
+}
