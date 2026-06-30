@@ -2062,7 +2062,7 @@ body.translated-rtl {
 }
 /* Controla o container da imagem */
 .hero-avatar-bloco {
-    max-width: 480px;      /* Aumentamos de 320px para 480px para ele ganhar imponência */
+    max-width: 600px;      /* Aumentamos de 320px para 480px para ele ganhar imponência */
     width: 100%;
     margin: 0;             /* Remove o alinhamento centralizado que o espremia */
     display: flex;
