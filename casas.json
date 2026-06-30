@@ -1,90 +1,20 @@
-[
-  {
-    "id": 101,
-    "titulo": "Imóvel Modelo 1",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principalof.jpg.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20101."
+{
+  "imovel_principal": {
+    "titulo": "Linda Casa na Vila Nova Cachoeirinha",
+    "imagens": [
+      "https://images.unsplash.com/... (link real da foto 1 da fachada)",
+      "https://images.unsplash.com/... (link real da foto 2)",
+      "https://images.unsplash.com/... (link real da foto 3)",
+      "https://images.unsplash.com/... (link real da foto 4 da cozinha)",
+      "https://images.unsplash.com/... (link real da foto 5)",
+      "https://images.unsplash.com/... (link real da foto 6)"
+    ]
   },
-  {
-    "id": 102,
-    "titulo": "Imóvel Modelo 2",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/fundo-novo.jpg-2-1.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20102."
+  "depoimentos": {
+    "mariana": "https://... (link da foto da Mariana)",
+    "claudinei": "https://... (link da foto do Claudinei)"
   },
-  {
-    "id": 103,
-    "titulo": "Imóvel Modelo 3",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/carlos-novo.jpg-2.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20103."
-  },
-  {
-    "id": 104,
-    "titulo": "Imóvel Modelo 4",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principal.jpg-1.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20104."
-  },
-  {
-    "id": 105,
-    "titulo": "Imóvel Modelo 5",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principal2.jpg-1.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20105."
-  },
-  {
-    "id": 106,
-    "titulo": "Imóvel Modelo 6",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principal3.jpg-1.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20106."
-  },
-  {
-    "id": 107,
-    "titulo": "Imóvel Modelo 7",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principal4.jpg.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20107."
-  },
-  {
-    "id": 108,
-    "titulo": "Imóvel Modelo 8",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/principal5.jpg.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20108."
-  },
-  {
-    "id": 109,
-    "titulo": "Imóvel Modelo 9",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/foto-mariana.jpg.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20109."
-  },
-  {
-    "id": 110,
-    "titulo": "Imóvel Modelo 10",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/foto1.jpg-scaled.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20110."
-  },
-  {
-    "id": 111,
-    "titulo": "Imóvel Modelo 11",
-    "descricao": "Insira aqui a descrição detalhada deste imóvel.",
-    "imagem": "https://centrallatina.com.br/wp-content/uploads/2026/06/foto2.jpg-scaled.png",
-    "disponivel": true,
-    "link_whatsapp": "https://wa.me/5511930298450?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20Imóvel%20111."
+  "corretores": {
+    "carlos": "https://... (cole aqui o link real da foto do Carlos de terno)"
   }
-]
+}
