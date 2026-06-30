@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Latina Imóveis - Vila Nova Cachoeirinha</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+    /* Oculta a caixa e a barra padrão do Google Tradutor */
+    #google_translate_element { display: none !important; }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    
+    /* Estilo básico para os botões caso não tenha no seu CSS */
+    .btn-idioma {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .btn-idioma:hover {
+        background: #f0f0f0;
+    }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <div id="google_translate_element"></div>
+
+    <header class="cabecalho-novo" id="inicio">
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Central Latina" class="logo-site">
+    </div>
+
+    <nav class="menu-header">
+        <a href="#inicio">Início</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <div class="seletor-idioma-custom">
+        <button onclick="mudarIdioma('pt')" class="btn-idioma active">BR PT</button>
+        <button onclick="mudarIdioma('es')" class="btn-idioma">ES ES</button>
+    </div>
+    
+    <div class="header-direita">
+        <div class="redes-sociais-topo">
+            <a href="https://www.instagram.com/centrallatinaofc/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/oficial.centrallatina" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@central_latina" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</header>
+
+    <section class="hero-novo" id="inicio">
+    <div class="hero-container-grid">
+        
+        <div class="hero-avatar-bloco">
+            <img src="{{ url_for('static', filename='img/carlos-novo.jpg') }}" alt="Corretor" class="avatar-img">
+        </div>
+
+        <div class="hero-conteudo">
+            <p class="tagline">Casa à Venda</p>
+            <h1>Vila Nova Cachoeirinha</h1>
+            
+            <div class="oferta-precos">
+                <span class="oferta-badge">Oferta especial</span>
+                <span class="preco-antigo">De: R$ 750.000</span>
+                <h2 class="preco-atual">Por: R$ 699.000</h2>
+            </div>
+
+            <div class="condicoes-box">
+                <p><strong>Entrada Facilitada:</strong> R$ 200.000</p>
+                <span>Aceita Financiamento Bancário / Direto com o Proprietário</span>
+            </div>
+
+            <button class="btn-whatsapp" onclick="abrirModal()">
+                <i class="fab fa-whatsapp"></i> Agendar visita pelo WhatsApp
+            </button>
+        </div>
+
+        <div class="hero-base">
+            
+    <div class="videos-triplos-wrapper">
+        <video autoplay muted loop playsinline class="video-principal-apresentacao">
+            <source src="static/img/video-novo.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+    </div>
+</div>
+        </div>
+
+    </div>
+</section>
+
+    <section class="oferta-precos-section" id="oferta-precos">
+        <div class="oferta-precos-card">
+            <div class="oferta-precos-header">
+                <p class="tagline">Oferta &amp; Preços</p>
+                <h2>Uma oportunidade rara para quem busca conforto e localização</h2>
+            </div>
+
+            <div class="oferta-precos-grid">
+                <div class="oferta-item oferta-item-destaque">
+                    <span class="oferta-label">Preço promocional</span>
+                    <strong>R$ 699.000</strong>
+                    <p>Valor único com excelente oportunidade de compra.</p>
+                </div>
+                <div class="oferta-item">
+                    <span class="oferta-label">Entrada facilitada</span>
+                    <strong>R$ 200.000</strong>
+                    <p>Planejamento simples para dar o primeiro passo.</p>
+                </div>
+                <div class="oferta-item">
+                    <span class="oferta-label">Financiamento</span>
+                    <strong>Flexível</strong>
+                    <p>Bancário ou direto com o proprietário, conforme sua necessidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container-principal galeria-detalhes-casa" id="imoveis">
+        <h2 class="titulo-secao">Galeria do Imóvel</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item" onclick="abrirLightbox(0)">
+                <img src="{{ url_for('static', filename='img/casas/principalof.jpg') }}" alt="Fachada do Imóvel" loading="lazy">
+            </div>
+            <div class="galeria-item" onclick="abrirLightbox(1)">
+                <img src="{{ url_for('static', filename='img/casas/principal.jpg') }}" alt="Foto 2" loading="lazy">
+            </div>
+            <div class="galeria-item" onclick="abrirLightbox(2)">
+                <img src="{{ url_for('static', filename='img/casas/principal2.jpg') }}" alt="Foto 3" loading="lazy">
+            </div>
+            <div class="galeria-item" onclick="abrirLightbox(3)">
+                <img src="{{ url_for('static', filename='img/casas/principal3.jpg') }}" alt="Foto 4" loading="lazy">
+            </div>
+            <div class="galeria-item" onclick="abrirLightbox(4)">
+                <img src="{{ url_for('static', filename='img/casas/principal4.jpg') }}" alt="Foto 5" loading="lazy">
+            </div>
+
+            <div class="galeria-item galeria-item-ver-mais" onclick="abrirLightbox(5)">
+                <img src="{{ url_for('static', filename='img/casas/principal5.jpg') }}" alt="Ver mais ambientes" loading="lazy">
+                <div class="overlay-ver-mais">
+                    <span>+25 Fotos</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="lightboxModal" class="lightbox-modal">
+            <span class="lightbox-fechar" onclick="fecharLightbox()">×</span>
+            <button class="lightbox-btn lightbox-btn-anterior" onclick="mudarFoto(-1)" aria-label="Foto Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <button class="lightbox-btn lightbox-btn-proximo" onclick="mudarFoto(1)" aria-label="Próxima Foto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="lightbox-conteudo">
+                <img id="lightboxImg" src="" alt="Foto Ampliada">
+                <div id="lightboxContador" class="lightbox-contador">1 / 31</div>
+            </div>
+        </div>
+
+        <div class="sobre-imovel-box">
+            <h2>Sobre o Imóvel</h2>
+            <ul class="lista-caracteristicas">
+                <li>🔹 136m² de área total</li>
+                <li>🔹 4 dormitórios</li>
+                <li>🔹 3 banheiros</li>
+                <li>🔹 1 vaga de garagem</li>
+                <li>🔹 Portão automático</li>
+                <li>🔹 Quintal privativo</li>
+                <li>🔹 Varanda</li>
+                <li>🔹 Lavanderia</li>
+                <li>🔹 Imóvel desocupado</li>
+                <li>🔹 Pronto para morar</li>
+            </ul>
+            <button class="btn-whatsapp" onclick="abrirModal()" style="margin-top: 25px;">AGENDAR VISITA</button>
+        </div>
+
+        <hr class="divisor-secao">
+    </main> 
+
+    <div class="fundo-depoimentos-lateral">
+        <div class="container">
+            <div class="faixa-informativa-diagonal">
+                <div class="faixa-diagonal-conteudo">
+                    <div class="info-bloco-destaque">
+                        <strong>Atendimento ao<br>Cliente</strong>
+                        <span>Central Latina</span>
+                    </div>
+                    <div class="info-divisor-linha"></div>
+                    <div class="info-bloco-texto">
+                        <span>São Paulo:</span>
+                        <strong>Brás 📍</strong>
+                    </div>
+                    <div class="info-divisor-linha"></div>
+                    <div class="info-bloco-texto row-center">
+                        <span class="icone-faixa">📞</span>
+                        <strong>(11) 96395-1875</strong>
+                    </div>
+                    <div class="info-divisor-linha"></div>
+                    <div class="info-bloco-texto row-center">
+                        <span class="icone-faixa">✉️</span>
+                        <strong>centrallatinaimobiliaria@gmail.com</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-principal" style="margin-top: 40px;">
+            <h3 style="color: var(--cor-primaria); margin-bottom: 20px;">Quem já comprou conosco:</h3>
+
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="cliente-perfil">
+                        <img src="{{ url_for('static', filename='img/foto_mariana.jpg') }}" alt="Foto da Mariana R." class="cliente-foto">
+                        <div class="cliente-info">
+                            <h4>Mariana R.</h4>
+                            <span>Compradora, Vila Nova Cachoeirinha</span>
+                        </div>
+                    </div>
+                    <div class="avaliacao-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">"Consegui as chaves da minha casa em Vila Nova foi um sonho realizado. A Central Latina tornou o processo de contrato e documentação tão tranquilo. Sinto-me muito segura aqui!"</p>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="cliente-perfil">
+                        <img src="{{ url_for('static', filename='img/foto_claudinei.jpg') }}" alt="Foto do Claudiney S." class="cliente-foto">
+                        <div class="cliente-info">
+                            <h4>Claudiney S.</h4>
+                            <span>Investidor e Comprador</span>
+                        </div>
+                    </div>
+                    <div class="avaliacao-estrelas">★★★★★</div>
+                    <p class="depoimento-texto">"Como comprador pela primeira vez, eu estava nervoso, mas a equipe técnica foi incrível. O contrato foi assinado sem surpresas, e a transparência foi total. Nota 10!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape" id="contato">
+        <div class="rodape-conteudo">
+            <div class="dados-contato">
+                <h3>Central Latina Imóveis</h3>
+                <p>📍 <strong>Endereço:</strong> Rua Coimbra, 435 – Brás, São Paulo – SP</p>
+                <p>🌐 <a href="http://www.centrallatina.com.br" target="_blank">www.centrallatina.com.br</a></p>
+                
+                <div class="redes-sociais">
+                    <p><strong>Siga-nos:</strong></p>
+                    <a href="https://www.instagram.com/centrallatinaofc/" target="_blank">Instagram: @centrallatinaofc</a>
+                    <a href="https://www.tiktok.com/@central_latina" target="_blank">TikTok: @central_latina</a>
+                    <a href="https://www.facebook.com/oficial.centrallatina" target="_blank">Facebook: Central Latina Imóveis</a>
+                    <a href="#">YouTube: Imobiliaria Central Latina</a>
+                </div>
+            </div>
+            
+            <div class="mapa-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.661974719541!2d-46.6133465!3d-23.5374528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5926ec091ff7%3A0x6bda19a9ebef284d!2sR.%20Coimbra%2C%20435%20-%20Br%C3%A1s%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710000000000" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-fundo" id="modalQualificacao">
+        <div class="modal-corpo">
+            <span class="fechar-modal" onclick="fecharModal()">×</span>
+            
+            <div id="passo1">
+                <h3>Deseja agendar uma visita?</h3>
+                <p class="pergunta">Você possui a entrada mínima de <strong>R$ 200.000</strong>?</p>
+                <div class="modal-botoes">
+                    <button class="btn-sim" onclick="avancarPasso2()">SIM, POSSUO</button>
+                    <button class="btn-nao" onclick="mostrarErroEntrada()">NÃO POSSUO</button>
+                </div>
+            </div>
+
+            <div id="passo2" style="display: none;">
+                <h3>Perfeito! Vamos prosseguir</h3>
+                <p>Insira seus dados para gerar o agendamento no WhatsApp:</p>
+                <input type="text" id="leadNome" placeholder="Seu Nome Completo" required>
+                <input type="text" id="leadWhats" placeholder="Seu WhatsApp com DDD" required>
+                <button class="btn-whatsapp" onclick="enviarParaWhatsApp()" style="width: 100%;">IR PARA O WHATSAPP</button>
+            </div>
+
+            <div id="passo3" style="display: none;">
+                <h3>Entendemos!</h3>
+                <p>Este imóvel específico exige a entrada mínima informada. Gostaria de falar com um corretor para conhecer outras opções que se encaixem no seu perfil?</p>
+                <button class="btn-whatsapp" onclick="enviarWhatsAppSemEntrada()" style="width: 100%;">FALAR COM CORRETOR</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'es,pt',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function mudarIdioma(sigla) {
+            var selectField = document.querySelector(".goog-te-combo");
+            if (selectField) {
+                selectField.value = sigla;
+                selectField.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementosAnimar = document.querySelectorAll('.titulo-secao, .foto-item, .sobre-imovel-box, .valor-card, .depoimento-card');
+            elementonAnimar = document.querySelectorAll('.titulo-secao, .foto-item, .sobre-imovel-box, .valor-card, .depoimento-card');
+            elementosAnimar.forEach(el => el.classList.add('reveal'));
+
+            const observador = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('ativo');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            elementosAnimar.forEach(el => observador.observe(el));
+        });
+    </script>
+
+    <script>
+        function abrirModal() {
+            document.getElementById('modalQualificacao').style.display = 'flex';
+            document.getElementById('passo1').style.display = 'block';
+            document.getElementById('passo2').style.display = 'none';
+            document.getElementById('passo3').style.display = 'none';
+        }
+        function fecharModal() {
+            document.getElementById('modalQualificacao').style.display = 'none';
+        }
+        function avancarPasso2() {
+            document.getElementById('passo1').style.display = 'none';
+            document.getElementById('passo2').style.display = 'block';
+        }
+        function mostrarErroEntrada() {
+            document.getElementById('passo1').style.display = 'none';
+            document.getElementById('passo3').style.display = 'block';
+        }
+        
+        function enviarParaWhatsApp() {
+            const nome = document.getElementById('leadNome').value;
+            const whats = document.getElementById('leadWhats').value;
+            
+            if(!nome || !whats) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            const texto = `Olá! Tenho interesse no imóvel destaque da Vila Nova Cachoeirinha. Possuo a entrada mínima de R$ 200.000 e gostaria de agendar uma visita.\n\n` +
+                          `Nome: ${nome}\n` +
+                          `WhatsApp informado: ${whats}\n\n` +
+                          `Link da Casa mencionada: https://www.centrallatinaimoveis.com.br/imoveis_detalhes.php?id=250\n` +
+                          `Link do Vídeo: https://youtu.be/CgJQGIJ2-lg?si=HcTHMupXnrZY0Siz\n\n` +
+                          `Endereço da Imobiliária:\n>> Rua Coimbra, 435 - Brás <<`;
+
+            const url = `https://api.whatsapp.com/send?phone=5511963951875&text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+            fecharModal();
+        }
+
+        function enviarWhatsAppSemEntrada() {
+            const texto = "Olá! Vi o imóvel da Vila Nova Cachoeirinha, mas não possuo a entrada de R$200k. Gostaria de ver outras opções de imóveis.";
+            const url = `https://api.whatsapp.com/send?phone=5511963951875&text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+            fecharModal();
+        }
+    </script>
+    <script>
+    const totalFotos = 31;
+    const listaFotos = [];
+    for (let i = 1; i <= totalFotos; i++) {
+        listaFotos.push(`/static/img/casas/foto${i}.jpg`);
+    }
+
+    let fotoAtualIndex = 0;
+
+    function abrirLightbox(index) {
+        fotoAtualIndex = index;
+        const modal = document.getElementById("lightboxModal");
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; 
+        atualizarLightbox();
+    }
+
+    function fecharLightbox() {
+        const modal = document.getElementById("lightboxModal");
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; 
+    }
+
+    function mudarFoto(direcao) {
+        fotoAtualIndex += direcao;
+        
+        if (fotoAtualIndex >= listaFotos.length) {
+            fotoAtualIndex = 0; 
+        } else if (fotoAtualIndex < 0) {
+            fotoAtualIndex = listaFotos.length - 1; 
+        }
+        
+        atualizarLightbox();
+    }
+
+    function atualizarLightbox() {
+        const imgElement = document.getElementById("lightboxImg");
+        const contadorElement = document.getElementById("lightboxContador");
+        
+        imgElement.src = listaFotos[fotoAtualIndex];
+        contadorElement.innerText = `${fotoAtualIndex + 1} / ${listaFotos.length}`;
+    }
+
+    document.getElementById("lightboxModal").addEventListener("click", function(e) {
+        if (e.target === this) {
+            fecharLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        const modal = document.getElementById("lightboxModal");
+        if (modal.style.display === "block") {
+            if (e.key === "ArrowRight") mudarFoto(1);
+            if (e.key === "ArrowLeft") mudarFoto(-1);
+            if (e.key === "Escape") fecharLightbox();
+        }
+    });
+</script>
+    
+<script>
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+    }
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth' 
+            });
+        }, 150);
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revelado');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { 
+        threshold: 0.2 
+    });
+
+    const videos = document.querySelectorAll('.container-video-spoiler');
+    videos.forEach((video) => {
+        observer.observe(video);
+    });
+</script>
+</body>
+</html>

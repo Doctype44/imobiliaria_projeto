@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div
+    style="background: white; padding: 45px 30px; border-radius: 8px; max-width: 550px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;">
+
+    <p class="etiqueta-destaque" style="margin-bottom: 10px;">Central Latina</p>
+    <h2 style="color: var(--cor-primaria); margin: 0 0 30px 0; font-size: 28px; font-weight: 600;">Canais de Atendimento
+    </h2>
+
+    <div style="margin-bottom: 30px;">
+        <p style="font-size: 15px; color: #666; margin-bottom: 8px;">Prefere um atendimento rápido?</p>
+        <a href="https://wa.me/5511930298450" target="_blank" style="text-decoration: none;">
+            <button class="btn-whatsapp"
+                style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; font-size: 16px;">
+                Chamar no WhatsApp: (11) 93029-8450
+            </button>
+        </a>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+    <div style="margin-bottom: 30px;">
+        <p style="font-size: 15px; color: #666; margin-bottom: 5px;"><strong>E-mail Corporativo</strong></p>
+        <a href="mailto:contato.centrallatina@gmail.com"
+            style="color: var(--cor-primaria); text-decoration: none; font-size: 16px; font-weight: bold; transition: color 0.2s;">
+            contato.centrallatina@gmail.com
+        </a>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+    <div style="margin-bottom: 15px;">
+        <p style="font-size: 15px; color: #666; margin-bottom: 5px;"><strong>Nosso Endereço</strong></p>
+        <p style="font-size: 16px; color: #333; line-height: 1.5; margin: 0 0 15px 0;">
+            R. Coimbra, 435 – Brás<br>São Paulo – SP
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=R.+Coimbra,+435+-+Br%C3%A1s,+S%C3%A3o+Paulo+-+SP"
+            target="_blank" style="text-decoration: none;">
+            <button
+                style="background-color: var(--cor-primaria); color: white; width: auto; padding: 10px 25px; font-size: 14px;">
+                Ver no Google Maps
+            </button>
+        </a>
+    </div>
+
+</div>
+{% endblock %}

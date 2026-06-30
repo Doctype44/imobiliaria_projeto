@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<div class="catalogo">
+    {% for casa in casas %}
+    <div class="cartao-casa">
+        <img src="{{ url_for('static', filename='img/' + casa.imagem) }}" alt="{{ casa.titulo }}">
+        <div class="conteudo-casa">
+            <p class="etiqueta-destaque">Boutique Imobiliária</p>
+            <h2>{{ casa.titulo }}</h2>
+            <p class="descricao-casa">{{ casa.descricao }}</p>
+
+            {% if casa.disponivel %}
+            <p class="status disponivel"><strong>Disponível</strong></p>
+
+            <a href="{{ casa.link_whatsapp }}" target="_blank" class="btn-whatsapp"
+                style="display: block; text-align: center; text-decoration: none;">
+                Tenho Interesse (WhatsApp)
+            </a>
+
+            {% else %}
+            <p class="status indisponivel"><strong>Indisponível</strong></p>
+            <button class="btn-indisponivel" disabled>Indisponível no momento</button>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

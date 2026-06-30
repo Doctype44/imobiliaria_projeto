@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline class="video-fundo">
+        <source src="{{ url_for('static', filename='img/video-fundo.mp4') }}" type="video/mp4">
+    </video>
+    <div class="overlay-video"></div>
+
+    <header class="cabecalho">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='img/img.png') }}" alt="Logo Imobiliária" class="logo-site">
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Nossos Imóveis</h1>
+        <nav class="menu-banner">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('casas') }}">Casas</a>
+            <a href="{{ url_for('sobre') }}">Sobre nós</a>
+            <a href="{{ url_for('contato') }}">Contato</a>
+        </nav>
+    </section>
+
+    <main class="container-principal">
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+</body>
+
+</html>
