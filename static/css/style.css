@@ -1173,7 +1173,7 @@ body.translated-rtl {
 .hero-novo {
     position: relative;
     /* imagem de fundo posicionada à direita para destacar a fachada */
-    background-image: linear-gradient(120deg, rgba(7, 15, 11, 0.86) 0%, rgba(8, 20, 14, 0.6) 45%, rgba(8, 20, 14, 0.38) 100%), url('../img/fundo-novo.jpg');
+    background-image: linear-gradient(120deg, rgba(7, 15, 11, 0.86) 0%, rgba(8, 20, 14, 0.6) 45%, rgba(8, 20, 14, 0.38) 100%), url(https://centrallatina.com.br/wp-content/uploads/2026/06/fundo-novo.jpg-2-1.png);
     background-position: center right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2031,7 +2031,7 @@ body.translated-rtl {
 /* 🖼️ Aplica a imagem de fundo apenas do divisor para baixo */
 .fundo-depoimentos-lateral {
     width: 100%;
-    background-image: url('../img/imagem2-fundo.jpg'); /* Nome exato da sua imagem */
+    background-image: url(https://centrallatina.com.br/wp-content/uploads/2026/06/imagem2-fundo.jpg-1.png); /* Nome exato da sua imagem */
     background-repeat: repeat-y;   /* Faz ela continuar descendo pelas laterais */
     background-size: 100% auto;    /* Estica perfeitamente até as bordas vazias da tela */
     background-position: center top; /* Garante que ela começa colada na linha do divisor */
