@@ -38,7 +38,7 @@
 
     <header class="cabecalho-novo" id="inicio">
     <div class="logo-container">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Central Latina" class="logo-site">
+        <img src="{{ url_for('static', filename='css/img/logo.png') }}" alt="Logo Central Latina" class="logo-site">">
     </div>
 
     <nav class="menu-header">
@@ -92,7 +92,7 @@
             
     <div class="videos-triplos-wrapper">
         <video autoplay muted loop playsinline class="video-principal-apresentacao">
-            <source src="static/img/video-novo.mp4" type="video/mp4">
+           <source src="{{ url_for('static', filename='css/img/video-novo.mp4') }}" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
     </div>
