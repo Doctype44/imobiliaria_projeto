@@ -1211,15 +1211,15 @@ body.translated-rtl {
     justify-content: flex-start; /* Alinha o bloco à esquerda */
     width: 100%;                 /* Corrigido de 100px para 100% para não esmagar a imagem */
     margin-top: 0px;             /* Diminuído para alinhar melhor no grid */
-    margin-left: -300px;         /* Puxa levemente para o canto esquerdo, como você queria */
+    margin-left: -120px;         /* Puxa o bloco para a esquerda de forma equilibrada (ajuste se precisar de mais) */
     margin-right: 0;             /* Zerado os 300px que estavam empurrando o layout */
     padding-right: 0;
     align-self: end;
 }
 
 .avatar-img {
-    width: -50px;      /* Faz a imagem respeitar o tamanho do bloco */
-    max-width: 520px;            /* Define o tamanho ideal do corretor na tela */
+    width: 100%;                 /* Mudado de -50px para 100% para a imagem responder ao tamanho correto */
+    max-width: 520px;            /* Define o tamanho ideal e imponente do corretor na tela */
     height: auto;                /* Altura automática para não distorcer */
     object-fit: contain;         /* Mudado de 'cover' para 'contain' para não cortar o corretor */
     
@@ -1227,7 +1227,7 @@ body.translated-rtl {
     /* Removemos o border-radius e o box-shadow que criavam o quadrado. */
     /* Se você quiser uma sombra Realista que segue o contorno do corpo dele, use filter: */
     filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.6));
-    transform: translateY(150px); /* Mantemos o corretor levemente abaixo para efeito de destaque */
+    transform: translateY(0px);  /* Zerado para ele não sumir para baixo da tela */
 }
 
 .hero-conteudo {
@@ -2059,23 +2059,4 @@ body.translated-rtl {
     width: 100%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     transition: transform 0.2s ease;
-}
-/* Controla o container da imagem */
-.hero-avatar-bloco {
-    max-width: 500px;      /* Mantém um tamanho imponente */
-    width: 100%;
-    margin: 0;             /* Zera as margens padrões */
-    display: flex;
-    justify-content: flex-start; /* Puxa o conteúdo do bloco totalmente para a esquerda */
-    align-items: flex-end; /* Mantém ele colado na base */
-}
-
-/* Controla a imagem em si */
-.hero-avatar-bloco img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    object-position: left bottom; /* Força a imagem a se alinhar na esquerda e na base */
-    margin-left: -20px; /* Altere ou aumente esse valor (ex: -30px, -40px) se quiser "colar" ele ainda mais para fora da borda */
 }
