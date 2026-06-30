@@ -2062,14 +2062,17 @@ body.translated-rtl {
 }
 /* Controla o container da imagem */
 .hero-avatar-bloco {
-    max-width: 320px; /* Altere esse valor (ex: 250px, 300px) para definir a largura máxima dele na tela */
+    max-width: 480px;      /* Aumentamos de 320px para 480px para ele ganhar imponência */
     width: 100%;
-    margin: 0 auto;   /* Centraliza o bloco se necessário */
+    margin: 0;             /* Remove o alinhamento centralizado que o espremia */
+    display: flex;
+    align-items: flex-end; /* Garante que ele fique colado na base da seção */
 }
 
-/* Controla a imagem em si para não passar do bloco */
+/* Controla a imagem em si */
 .hero-avatar-bloco img {
     width: 100%;
-    height: auto;     /* Mantém a proporção original para não achatar o rosto */
+    height: auto;          /* Mantém a proporção do corpo perfeitamente */
+    display: block;
     object-fit: contain;
 }
